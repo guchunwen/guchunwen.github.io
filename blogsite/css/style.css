@@ -15,10 +15,10 @@ header.inner{
     top: -1px;
 }
 h1{
-    font-size: 60px;
+    font-size: 45px;
     line-height: 60px;
-    margin-bottom: 25px;
-    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-top: 30px;
     font-weight: 300;
     letter-spacing: -2px;
     color: #e0e0e0;
@@ -103,6 +103,7 @@ header .header_right li.mail{
     top: -6px;
     left: 220px;
     padding-top: 6px;
+    overflow: hidden;
 }
 
 .main .content{
@@ -158,6 +159,46 @@ header .header_right li.mail{
     position: relative;
     background: url("../images/content_footer.png") no-repeat center top;
 }
+
+
+/*----------------content blue----------------*/
+.main .content_blue{
+}
+.main .content_blue img{
+    float: right;
+    width: 225px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 66px;
+}
+.main .content_blue h3{
+    /*float: left;*/
+    font-size:20px;
+    margin-bottom: 15px;
+}
+.main .content_blue .content{
+    line-height:50px;
+    font-size: 18px;
+}
+
+/*----------------content green----------------*/
+.main .content_green{
+
+}
+.main .content_green .left{
+    float: left;
+    width: 290px;
+    margin-right: 22px;
+}
+.main .content_green .right{
+    float: left;
+    width: 290px;
+}
+.main .content_green h3{
+    font-size:20px;
+    margin-bottom: 20px;
+}
+
 
 
 .footer{

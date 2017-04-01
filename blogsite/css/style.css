@@ -111,6 +111,7 @@ header .header_right li.mail{
     height: 415px;
     margin: 10px;
     padding-right: 10px;
+    overflow: hidden;
 }
 
 .main .top{
@@ -174,7 +175,9 @@ header .header_right li.mail{
 .main .content_blue h3{
     /*float: left;*/
     font-size:20px;
-    margin-bottom: 15px;
+    margin-bottom: 42px;
+    line-height: 20px;
+    color: #e0e0e0;
 }
 .main .content_blue .content{
     line-height:50px;
@@ -197,6 +200,38 @@ header .header_right li.mail{
 .main .content_green h3{
     font-size:20px;
     margin-bottom: 20px;
+    line-height: 20px;
+    color: #e0e0e0;
+}
+.main .content_green dl{
+    margin-bottom: 40px;
+}
+.main .content_green  dt{
+    color: #8BB300;
+    font: bold 16px/24px 'Microsoft YaHei';
+}
+.main .content_green  dd{
+    font: 16px/24px 'Microsoft YaHei';
+}
+.main .content_green .left li{
+    color: #8BB300;
+    font: bold 16px/24px 'Microsoft YaHei';
+    margin-bottom: 30px;
+}
+.main .content_green .left li .skill_item{
+    float: right;
+    width: 92px;
+    margin-right: 85px;
+    margin-top: 3px;
+}
+.main .content_green .left li .skill_item span{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url("../images/skill_icon.png") no-repeat 0 0;
+}
+.main .content_green .left li .skill_item span.color{
+    background: url("../images/skill_icon.png") no-repeat 0 -16px;
 }
 
 
@@ -213,4 +248,61 @@ header .header_right li.mail{
     position: relative;
     background: url("../images/footer_light.png") no-repeat center top;
     padding:25px 0;
+}
+.footer .inner ul{
+    height: 54px;
+}
+.footer .inner li{
+    float: right;
+    margin-right: 10px;
+    font:18px/54px Arial;
+    color: #666;
+    position: relative;
+}
+.footer .inner li a{
+    display: block;
+    width: 54px;
+    height: 54px;
+    transition: .8s;
+}
+.footer .inner li a:hover{
+    transition: .6s;
+}
+.footer .inner li.email a{
+    background: url("../images/foot_email.png") no-repeat center;
+}
+.footer .inner li.email a:hover{
+    background: url("../images/email_h.png") no-repeat center;
+}
+.footer .inner li.sina a{
+    background: url("../images/foot_sina.png") no-repeat center;
+}
+.footer .inner li.sina a:hover{
+    background: url("../images/sina_h.png") no-repeat center;
+}
+.footer .inner li.weChat a{
+    background: url("../images/foot_weChat.png") no-repeat center;
+}
+.footer .inner li.weChat a:hover{
+    background: url("../images/weChat_h.png") no-repeat center;
+}
+.footer .inner li.qq a{
+    background: url("../images/foot_qq.png") no-repeat center;
+}
+.footer .inner li.qq a:hover{
+    background: url("../images/qq_h.png") no-repeat center;
+}
+
+
+.footer .inner li.sina .pic_two{
+    position: absolute;
+    bottom: 54px;
+    z-index: 10;
+    display: none;
+}
+.footer .inner li.weChat .pic_two{
+    position: absolute;
+    bottom: 54px;
+    z-index: 10;
+    display: none;
 }

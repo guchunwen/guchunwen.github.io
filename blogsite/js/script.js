@@ -2,6 +2,18 @@
  * Created by hxsd on 2017/3/31.
  */
 $(document).ready(function () {
+// //禁用右键
+//     function Click(){
+//
+//         alert('excuse me???');
+//
+//         window.event.returnValue=false;
+//
+//     }
+//
+//     document.oncontextmenu=Click;
+
+
     //内容区域点击效果
     let num = true;
     $('.main .list li').click(function () {
@@ -32,9 +44,22 @@ $(document).ready(function () {
 
 
 
+//footer 二维码
+    //sina
+    $('.footer .inner li.sina a').click(function () {
+        $('.footer .inner li.sina .pic_two').fadeIn(800);
+    });
+    $('.footer .inner li.sina a').mouseleave(function () {
+        $('.footer .inner li.sina .pic_two').fadeOut();
+    });
 
-
-
+    //weChat
+    $('.footer .inner li.weChat a').click(function () {
+        $('.footer .inner li.weChat .pic_two').fadeIn(800);
+    });
+    $('.footer .inner li.weChat a').mouseleave(function () {
+        $('.footer .inner li.weChat .pic_two').fadeOut();
+    })
 
 
 });

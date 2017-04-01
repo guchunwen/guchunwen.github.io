@@ -112,6 +112,7 @@ header .header_right li.mail{
     margin: 10px;
     padding-right: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .main .top{
@@ -160,7 +161,16 @@ header .header_right li.mail{
     position: relative;
     background: url("../images/content_footer.png") no-repeat center top;
 }
-
+.main .content_long{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main .content_long:after{
+    content: '';
+    display: block;
+    clear: both;
+}
 
 /*----------------content blue----------------*/
 .main .content_blue{
@@ -233,6 +243,20 @@ header .header_right li.mail{
 .main .content_green .left li .skill_item span.color{
     background: url("../images/skill_icon.png") no-repeat 0 -16px;
 }
+
+.main .content .scroll{
+    height: 200px;
+    width: 10px;
+    border-radius: 10px;
+    background: #343434;
+    position: absolute;
+    top: 0;/*216*/
+    right: 0;
+}
+.main .content_green .content .scroll:hover{
+    background: #e0e0e0;
+}
+
 
 
 

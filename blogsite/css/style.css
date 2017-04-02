@@ -253,10 +253,98 @@ header .header_right li.mail{
     top: 0;/*216*/
     right: 0;
 }
-.main .content_green .content .scroll:hover{
+.main .content .scroll:hover{
     background: #e0e0e0;
 }
 
+/*----------------------------yellow-----------------*/
+.main .content_yellow ul.proList{
+    font-size: 0;
+}
+.main .content_yellow ul.proList:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main .content_yellow ul.proList li{
+    float: left;
+    position: relative;
+    width: 180px;
+    margin:13px;
+    transition: .6s;
+    overflow: hidden;
+}
+.main .content_yellow ul.proList li p{
+    font: 16px/20px 'Microsoft YaHei';
+    background: rgba(234,176,0,0.5);
+    color: #e0e0e0;
+    text-align: center;
+    position: absolute;
+    bottom: -20px;
+    left:0;
+    width: 100%;
+    transition: .6s;
+}
+.main .content_yellow ul.proList li img{
+    width: 100%;
+}
+.main .content_yellow ul.proList li a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.main .content_yellow ul.proList li:hover p{
+    bottom: 0;
+    transition: .6s;
+}
+
+.main .content_yellow .big_show{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 600px;
+    height: 340px;
+    overflow: hidden;
+    display: none;
+}
+.main .content_yellow .big_show img{
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.main .content_yellow .big_show a{
+    position: absolute;
+    top: 40%;
+    z-index: 90;
+    width: 75px;
+    height: 127px;
+    opacity: 0;
+    transition: .6s;
+}
+.main .content_yellow .big_show a.pro_close{
+    top: 0;
+    right: 0;
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    background: url("../images/pro_close.png");
+}
+.main .content_yellow .big_show a.prev{
+    background: url("../images/prev.png") no-repeat;
+    left: 0;
+}
+.main .content_yellow .big_show a.next{
+    background: url("../images/next.png") no-repeat;
+    right: 0;
+}
+.main .content_yellow .big_show:hover a{
+    opacity: 1;
+    transition: .6s;
+}
 
 
 

@@ -51,6 +51,7 @@ $(document).ready(function (e) {
     scroll.addEventListener('mousedown',onDown); //滚动条监听鼠标按下
     let startY = 0;
     function onDown(e) {
+        scroll.style.background = '#e0e0e0';
         startY = e.offsetY; //鼠标按下事件触发，鼠标按下位置到当前元素上端的Y坐标
         document.addEventListener('mousemove',onMove);//监听鼠标移动
         document.addEventListener('mouseup',onUp);//监听鼠标抬起
@@ -70,12 +71,50 @@ $(document).ready(function (e) {
         }
     }
     function onUp(e) { //移除监听
+        scroll.style.background = '#343434';
         document.removeEventListener('mousemove',onMove);
         document.removeEventListener('mouseup',onUp);
     }
 
 //    滚动条结束
 
+
+//    项目以及作品展示
+    let imgCon = $('.main .content_yellow .big_show img');
+    $('.main .content_yellow ul.proList li a').click(function () {
+        imgCon.css({'z-index':'20'});
+        imgCon.eq(0).css({'z-index':'21'});
+
+        let par = $(this).parent();
+        let i = par.index();
+        $('.main .content_yellow .big_show').eq(i).fadeIn();
+    });
+
+    $('.main .content_yellow .big_show a.pro_close').click(function () {
+        $('.main .content_yellow .big_show').fadeOut();
+    });
+
+
+    let imgNum = 0;
+    // console.log($('.main .content_yellow .big_show img'));
+    $('.main .content_yellow .big_show a.prev').click(function () {
+        imgCon.css({'z-index':'20'});
+        imgNum++;
+        if (imgNum == imgCon.length){
+            imgNum = 0;
+        }
+        imgCon.eq(imgNum).css({'z-index':'21'});
+
+    });
+
+    $('.main .content_yellow .big_show a.next').click(function () {
+        imgCon.css({'z-index':'20'});
+        imgNum--;
+        if (imgNum == -1){
+            imgNum = imgCon.length-1;
+        }
+        imgCon.eq(imgNum).css({'z-index':'21'});
+    });
 
 //footer 二维码
     //sina

@@ -1,19 +1,9 @@
 /**
  * Created by hxsd on 2017/3/31.
  */
-let images = [
-    '../images/me.JPG',
-    '../images/project/sn_1.png',
-    '../images/project/sn_2.png',
-    '../images/project/sn_3.png'
-];
-if (document.images){
-    for(let i = 0;i<images.length;i++) {
-        let image = new Image();
-        image.src = images[i];
-    }
-}
+
 $(document).ready(function (e) {
+    $("img").lazyload({effect: "fadeIn"});
 // //禁用右键
 //     function Click(){
 //

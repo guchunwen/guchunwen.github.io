@@ -3,7 +3,10 @@
  */
 
 $(document).ready(function (e) {
-    $("img").lazyload({effect: "fadeIn"});
+    $(function () {
+        $("img").lazyload({effect: "fadeIn"});
+    });
+
 // //禁用右键
 //     function Click(){
 //

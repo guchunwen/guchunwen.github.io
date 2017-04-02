@@ -49,6 +49,7 @@ $(document).ready(function (e) {
     let bigBox = document.querySelector('.main .content');
 
     scroll.addEventListener('mousedown',onDown); //滚动条监听鼠标按下
+    con.addEventListener('mousewheel',onWheel);//内容区域监听滚轮事件
     let startY = 0;
     function onDown(e) {
         scroll.style.background = '#e0e0e0';
@@ -70,6 +71,24 @@ $(document).ready(function (e) {
                         //用内容区域可滚动的范围 除以  滚动条滚动的范围
         }
     }
+
+    //滚轮事件
+    function onWheel(e) {
+        // console.log(e.wheelDelta);
+        let wheel = parseInt(scroll.style.top) || 0;//绑定鼠标滑动滚动条后，滚动条位置
+        wheel += -(bigBox.offsetHeight - scroll.offsetHeight)/e.wheelDelta*20;//计算滚动条，根据滚轮滑动一次的距离，计算控制滚轮每次滑动 ，滚动条滑动20,每次20叠加给wheel
+        console.log(wheel);
+        if (wheel < 0){//控制滚轮滑动后，滚动条的上限和下限
+            wheel = 0;
+        }else if(wheel >bigBox.offsetHeight - scroll.offsetHeight){
+            wheel = 215;
+        }
+        scroll.style.top = wheel +'px';
+
+        con.style.top = -(con.offsetHeight - bigBox.offsetHeight)/(bigBox.offsetHeight - scroll.offsetHeight)*wheel+'px';
+    //    此处同理鼠标点击滚动条
+    }
+
     function onUp(e) { //移除监听
         scroll.style.background = '#343434';
         document.removeEventListener('mousemove',onMove);

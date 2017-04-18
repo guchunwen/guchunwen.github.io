@@ -32,6 +32,7 @@ $(document).ready(function (e) {
             for(let i =0;i<4;i++) {
                 $('.main .list li').eq(i).stop(true,true).delay(300).animate({'left': 220*i}, 300);
             }
+            $('.main .content_yellow .big_show').css({'display':'none'});
         }
         num = !num;
     });
@@ -42,6 +43,7 @@ $(document).ready(function (e) {
         for(let i =0;i<4;i++) {
             $('.main .list li').eq(i).stop(true,true).delay(300).animate({'left': 220*i}, 300);
         }
+        $('.main .content_yellow .big_show').css({'display':'none'});
         num = !num;
     });
 

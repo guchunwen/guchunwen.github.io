@@ -52,7 +52,10 @@ $(document).ready(function (e) {
     let scroll = document.querySelector('.main .content .scroll');
     let con = document.querySelector('.main .content_long');
     let bigBox = document.querySelector('.main .content');
-
+    if (con.offsetHeight>bigBox.offsetHeight){
+        scroll.style.height = bigBox.offsetHeight/con.offsetHeight*bigBox.offsetHeight + 'px';
+        console.log(scroll.style.height);
+    }
     scroll.addEventListener('mousedown',onDown); //滚动条监听鼠标按下
     con.addEventListener('mousewheel',onWheel);//内容区域监听滚轮事件
     let startY = 0;
@@ -66,9 +69,9 @@ $(document).ready(function (e) {
         if ((e.clientY - startY -226)<0){ //限制滚动条移动区域
             scroll.style.top = 0;
             con.style.top = 0;
-        }else if ((e.clientY - startY -226)>215){//限制滚动条移动区域
-            scroll.style.top = '215px';
-            con.style.top = -(con.offsetHeight - bigBox.offsetHeight)/(bigBox.offsetHeight - scroll.offsetHeight)*215+'px';
+        }else if ((e.clientY - startY -226)>bigBox.offsetHeight-scroll.offsetHeight){//限制滚动条移动区域
+            scroll.style.top = bigBox.offsetHeight - scroll.offsetHeight+'px';
+            con.style.top = -(con.offsetHeight - bigBox.offsetHeight)+'px';
         }else {
             scroll.style.top = e.clientY - startY -226 +'px';//鼠标到浏览器上端的距离 - 鼠标按下时到当前元素上端的距离 - 滚动条上端到浏览器上端的距离 == 滚动条滚动的距离
             con.style.top = -(con.offsetHeight - bigBox.offsetHeight)/(bigBox.offsetHeight - scroll.offsetHeight)*(e.clientY - startY -226)+'px';
@@ -86,7 +89,7 @@ $(document).ready(function (e) {
         if (wheel < 0){//控制滚轮滑动后，滚动条的上限和下限
             wheel = 0;
         }else if(wheel >bigBox.offsetHeight - scroll.offsetHeight){
-            wheel = 215;
+            wheel = bigBox.offsetHeight - scroll.offsetHeight;
         }
         scroll.style.top = wheel +'px';
 

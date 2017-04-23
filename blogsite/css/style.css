@@ -426,3 +426,6 @@ header .header_right li.mail{
     z-index: 10;
     display: none;
 }
+.footer .inner li img{
+    width: 145px;
+}

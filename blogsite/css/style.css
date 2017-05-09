@@ -158,8 +158,9 @@ header .header_right li.mail{
 .main .bot{
     top: -22px;
     height: 53px;
+    width: 100%;
     position: relative;
-    background: url("http://images.chavesgu.com/content_footer.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_footer.png") repeat-x center;
 }
 .main .content_long{
     position: absolute;
@@ -373,7 +374,7 @@ header .header_right li.mail{
     width: 145px;
 }
 
-.bot{
+.botBeiAn{
     position: absolute;
     width: 145px;
     bottom: 40px;
@@ -381,7 +382,7 @@ header .header_right li.mail{
     right: 0;
     margin:auto;
 }
-.bot a{
+.botBeiAn a{
     display: block;
     color: #666;
     text-align: center;

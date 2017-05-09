@@ -30,11 +30,11 @@ li.arrow{
     cursor: pointer;
 }
 .prev{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/prev.png") no-repeat;
+    background: url("http://images.chavesgu.com/prev.png") no-repeat;
     left: 0;
 }
 .next{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/next.png") no-repeat;
+    background: url("http://images.chavesgu.com/next.png") no-repeat;
     right: 0;
 }
 ul:hover .arrow{

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于jq的banner轮播</title>
+    <link rel="icon" href="http://images.chavesgu.com/title_icon.ico" type="img/x-ico">
+    <link rel="stylesheet" href="http://images.chavesgu.com/reset.css">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner {
+            width: 100%;
+            height: 590px;
+            overflow: hidden;
+            font-size: 0;
+            position: relative;
+        }
+
+        .banner_long {
+            width: 400%;
+        }
+        .banner_long img{
+            width: 25%;
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*margin:auto;*/
+        }
+
+        .banner ul {
+            height: 20px;
+            width: 120px;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 5;
+        }
+
+        .banner li {
+            float: left;
+            margin: 0 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #666;
+        }
+
+        .banner li:hover {
+            background: #f60;
+        }
+
+        .banner li.color {
+            background: #f60;
+        }
+        div.arrow{
+            position: absolute;
+            top: 45%;
+            opacity: 0;
+            transition: .6s;
+            cursor: pointer;
+        }
+        .prev{
+            left: 0;
+        }
+        .next{
+            right: 0;
+        }
+        .banner:hover div.arrow{
+            opacity: 1;
+            transition: .6s;
+        }
+    </style>
+    <script src="http://images.chavesgu.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="banner">
+    <div class="banner_long">
+        <img src="http://images.chavesgu.com/banner1.jpg" alt="">
+        <img src="http://images.chavesgu.com/banner2.jpg" alt="">
+        <img src="http://images.chavesgu.com/banner3.jpg" alt="">
+        <img src="http://images.chavesgu.com/banner1.jpg" alt="">
+    </div>
+    <ul>
+        <li class="color icon"></li>
+        <li class="icon"></li>
+        <li class="icon"></li>
+    </ul>
+    <div class="prev arrow"><img src="http://images.chavesgu.com/prev.png" alt=""></div>
+    <div class="next arrow"><img src="http://images.chavesgu.com/next.png" alt=""></div>
+</div>
+
+<script>
+    let banner = document.querySelector('.banner');
+    let con = $('.banner_long');
+    let imgAll = $('.banner_long img');
+    let icon = $('li.icon');
+    let prev = document.querySelector('.prev');
+    let next = document.querySelector('.next');
+    let timerC;
+    let imgKey = 0;
+    let iconKey = 0;
+
+    function nextFn() {//点击右箭头
+//        开始轮播图片
+        imgKey++;
+        if (imgKey>imgAll.length-1){//切换第五张图片时，重置位置
+            con.css({'margin-left':'0'});
+            imgKey = 1;
+        }
+        let marginNum = -100*imgKey+'%';
+        con.stop().animate({'margin-left':marginNum},1000);
+
+//        开始改变小圆点
+        iconKey++;
+        if (iconKey>imgAll.length-2){//切换第四个点时，重置位置
+            iconKey = 0;
+        }
+        icon.eq(iconKey).addClass('color').siblings('li').removeClass('color');
+    }
+
+    next.onclick = function () {
+        nextFn();
+    };
+    prev.onclick = function () {
+        imgKey--;
+        if (imgKey<0){//第一张图片向左切换图片时，重置位置.;
+            con.css({'margin-left':-100*(imgAll.length-1)+'%'});
+            imgKey = imgAll.length-2;
+        }
+        let marginNum = -100*imgKey+'%';
+        con.stop().animate({'margin-left':marginNum},1000);
+
+//        开始改变小圆点
+        iconKey--;
+        if (iconKey<0){//第一个点向左切换时，重置位置
+            iconKey = imgAll.length-2;
+        }
+        icon.eq(iconKey).addClass('color').siblings('li').removeClass('color');
+    };
+
+    //小圆点功能
+    icon.click(function () {
+//        改变小圆点
+        let i = $(this).index();
+        icon.eq(i).addClass('color').siblings('li').removeClass('color');
+//        改变轮播图
+        let marginNum = -100*i+'%';
+        con.stop().animate({'margin-left':marginNum},1000);
+
+        iconKey = i;
+        imgKey = i;
+    });
+
+    //自动轮播功能
+    timerC = setInterval(nextFn, 2000);
+
+    banner.onmouseover = function () {
+        clearInterval(timerC);
+    };
+
+    banner.onmouseout = function () {
+        clearInterval(timerC);
+        timerC = setInterval(nextFn, 2000);
+    }
+
+
+    
+
+
+</script>
+</body>
+</html>

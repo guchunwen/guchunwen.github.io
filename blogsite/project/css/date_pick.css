@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0
+}
+.bigWrap{
+    width: 430px;
+    margin-top: 100px;
+    margin-left: 200px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.wrap{
+    width: 390px;
+    /*overflow: hidden;*/
+    background: url("http://images.chavesgu.com/wood-bg.png");
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index:1;
+    border-top: 1px solid #d57b24;
+    box-shadow: 0 2px 1px 0 rgba(255,255,255,0.7) inset;
+}
+.woodBot{
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 390px;
+    padding:0 20px;
+    height: 100%;
+    border-radius: 10px;
+    background: url("http://images.chavesgu.com/wood-bg.png");
+    box-shadow: 0 -5px 4px 0 rgba(0,0,0,0.4) inset,0 2px 5px 0 rgba(0,0,0,0.5);
+}
+.wrap a.close{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+    width: 50px;
+    height: 30px;
+    font:16px/30px Impact;
+    text-decoration: none;
+    color: #000;
+}
+.wrap .addNote{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    padding: 20px;
+    width: 255px;
+}
+.wrap .addNote input{
+    width: 232px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding:0 10px;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font: 20px/50px 'Microsoft YaHei';
+    outline: none;
+}
+.wrap .addNote button.addBtn{
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font:20px/50px Impact;
+    top: 20px;
+    right: -45px;
+    outline: none;
+    cursor: pointer;
+}
+.wrap .addNote select{
+    width: 70px;
+    height: 30px;
+    padding-left: 10px;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    outline: none;
+}
+.wrap .addNote .conBox{
+    width: 275px;
+    height: 285px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.wrap .addNote .conBox:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrap .addNote .conBox .con{
+    float: left;
+}
+.wrap .addNote .conBox .scroll{
+    float: right;
+    width: 10px;
+    border-radius: 5px;
+    background: #000;
+    cursor: default;
+}
+.wrap .conBox .noteCon{
+    width: 232px;
+    margin-bottom: 20px;
+    padding:10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+.wrap .conBox .noteCon p.noteTxt{
+    font:20px/30px 'Microsoft YaHei';
+    color: #000;
+}
+.wrap .conBox .noteCon a.del{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+    font:20px/20px 'Microsoft YaHei';
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.wrap .conBox .noteCon a.del:hover{
+    border: 1px solid #000;
+}
+#week_wrap {
+    width: 350px;
+    height: 91px;
+    padding: 20px;
+    padding-bottom:0;
+    /*margin: 100px auto;*/
+    overflow: hidden;
+    border-top: 1px solid #666;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    z-index:5;
+    box-shadow: 0 1px 1px 0 rgba(255,255,255,0.8) inset,0 2px 5px 0 rgba(0,0,0,1);
+    background: url("http://images.chavesgu.com/week_bg.png");
+}
+
+#week_wrap h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+#week_wrap a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top: 20px;
+    transition: .6s;
+}
+
+#week_wrap a:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+    transition: .6s;
+}
+
+#week_wrap .prev {
+    left: 20px;
+    background: url("http://images.chavesgu.com/left_arrow.png");
+}
+
+#week_wrap .next {
+    right: 20px;
+    background: url("http://images.chavesgu.com/right_arrow.png");
+}
+
+#week_wrap .week {
+    height: 30px;
+    line-height: 20px;
+    /*border-bottom: 1px solid #000;*/
+    /*margin-bottom: 10px;*/
+}
+
+#week_wrap .week li {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    list-style: none;
+    color: #eee;
+    font-weight: bold;
+    -webkit-animation: txt 2s linear infinite;
+}
+.tableWrap{
+    width: 350px;
+    padding: 20px;
+    position: relative;
+    z-index:4;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,1);
+}
+.tableWrap .dateList {
+    border-collapse: collapse;
+}
+
+.tableWrap .dateList td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.tableWrap .dateList td.checked{
+    background: #00ae68;
+}
+.tableWrap .dateList td.hasNote:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #f00;
+}
+.tableWrap .dateList td:hover{
+    background: rgba(255,150,0,0.3);
+}
+
+@-webkit-keyframes txt {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+    50% {
+        text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+    }
+}

@@ -1,5 +1,5 @@
 body{
-    background: #252525 url("http://ooi8uky7u.bkt.clouddn.com/page_background.png") repeat-x;
+    background: #252525 url("http://images.chavesgu.com/page_background.png") repeat-x;
     font: 13px Arial;
     color: #9f9f9f;
 }
@@ -10,7 +10,7 @@ body{
 header.inner{
     margin-top: 51px;
     height: 165px;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/header_light.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/header_light.png") no-repeat center top;
     position: relative;
     top: -1px;
 }
@@ -36,10 +36,10 @@ header .header_right li{
     padding-left: 25px;
 }
 header .header_right li.phone{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/header_icon_phone.png") no-repeat left center;
+    background: url("http://images.chavesgu.com/header_icon_phone.png") no-repeat left center;
 }
 header .header_right li.mail{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/header_icon_mail.png") no-repeat left center;
+    background: url("http://images.chavesgu.com/header_icon_mail.png") no-repeat left center;
 }
 .header_left p{
     color: #969696;
@@ -67,19 +67,19 @@ header .header_right li.mail{
     left: 0;
 }
 .main .list li.blue{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_box_blue.png") no-repeat 0 0;
+    background: url("http://images.chavesgu.com/content_box_blue.png") no-repeat 0 0;
     left: 0;
 }
 .main .list li.green{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_box_green.png") no-repeat 0 0;
+    background: url("http://images.chavesgu.com/content_box_green.png") no-repeat 0 0;
     left: 220px;
 }
 .main .list li.yellow{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_box_yellow.png") no-repeat 0 0;
+    background: url("http://images.chavesgu.com/content_box_yellow.png") no-repeat 0 0;
     left: 440px;
 }
 .main .list li.orange{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_box_orange.png") no-repeat 0 0;
+    background: url("http://images.chavesgu.com/content_box_orange.png") no-repeat 0 0;
     left: 660px;
     margin-right: 0;
 }
@@ -131,16 +131,16 @@ header .header_right li.mail{
     background-color: #D75902;
 }
 .main .content_blue .top a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_close_blue.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_close_blue.png") no-repeat center top;
 }
 .main .content_green .top a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_close_green.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_close_green.png") no-repeat center top;
 }
 .main .content_yellow .top a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_close_yellow.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_close_yellow.png") no-repeat center top;
 }
 .main .content_orange .top a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_close_orange.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_close_orange.png") no-repeat center top;
 }
 
 
@@ -153,13 +153,13 @@ header .header_right li.mail{
     opacity: 0;
 }
 .main .top a:hover{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_close_blue.png") no-repeat center -15px;
+    background: url("http://images.chavesgu.com/content_close_blue.png") no-repeat center -15px;
 }
 .main .bot{
     top: -22px;
     height: 53px;
     position: relative;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/content_footer.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/content_footer.png") no-repeat center top;
 }
 .main .content_long{
     position: absolute;
@@ -238,10 +238,10 @@ header .header_right li.mail{
     float: left;
     width: 16px;
     height: 16px;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/skill_icon.png") no-repeat 0 0;
+    background: url("http://images.chavesgu.com/skill_icon.png") no-repeat 0 0;
 }
 .main .content_green .left li .skill_item span.color{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/skill_icon.png") no-repeat 0 -16px;
+    background: url("http://images.chavesgu.com/skill_icon.png") no-repeat 0 -16px;
 }
 
 .main .content .scroll{
@@ -272,7 +272,6 @@ header .header_right li.mail{
     width: 180px;
     margin:13px;
     transition: .6s;
-    overflow: hidden;
 }
 .main .content_yellow ul.proList li p{
     font: 16px/20px 'Microsoft YaHei';
@@ -294,66 +293,10 @@ header .header_right li.mail{
     height: 100%;
     top: 0;
     left: 0;
+    text-align: center;
+    color: #fff;
+    background: url("http://images.chavesgu.com/show_icon.png") no-repeat center;
 }
-.main .content_yellow ul.proList li:hover p{
-    bottom: 0;
-    transition: .6s;
-}
-
-.main .content_yellow .big_show{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 600px;
-    height: 340px;
-    overflow: hidden;
-    display: none;
-}
-.main .content_yellow .big_show img{
-    width: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20;
-}
-.main .content_yellow .big_show a{
-    position: absolute;
-    top: 35%;
-    z-index: 90;
-    width: 75px;
-    height: 127px;
-    opacity: 0;
-    transition: .6s;
-}
-.main .content_yellow .big_show a.pro_close{
-    top: 0;
-    right: 0;
-    opacity: 1;
-    width: 30px;
-    height: 30px;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/pro_close.png");
-}
-.main .content_yellow .big_show a.prev{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/prev.png") no-repeat;
-    left: 0;
-}
-.main .content_yellow .big_show a.next{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/next.png") no-repeat;
-    right: 0;
-}
-.main .content_yellow .big_show a.scale{
-    width: 125px;
-    height: 125px;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/scale_icon.png") no-repeat center;
-    left: 0;
-    right: 0;
-    margin:auto;
-}
-.main .content_yellow .big_show:hover a{
-    opacity: 1;
-    transition: .6s;
-}
-
 
 
 .footer{
@@ -366,7 +309,7 @@ header .header_right li.mail{
 .footer .inner{
     top: -1px;
     position: relative;
-    background: url("http://ooi8uky7u.bkt.clouddn.com/footer_light.png") no-repeat center top;
+    background: url("http://images.chavesgu.com/footer_light.png") no-repeat center top;
     padding:25px 0;
 }
 .footer .inner ul{
@@ -389,28 +332,28 @@ header .header_right li.mail{
     transition: .6s;
 }
 .footer .inner li.email a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/foot_email.png") no-repeat center;
+    background: url("http://images.chavesgu.com/foot_email.png") no-repeat center;
 }
 .footer .inner li.email a:hover{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/email_h.png") no-repeat center;
+    background: url("http://images.chavesgu.com/email_h.png") no-repeat center;
 }
 .footer .inner li.sina a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/foot_sina.png") no-repeat center;
+    background: url("http://images.chavesgu.com/foot_sina.png") no-repeat center;
 }
 .footer .inner li.sina a:hover{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/sina_h.png") no-repeat center;
+    background: url("http://images.chavesgu.com/sina_h.png") no-repeat center;
 }
 .footer .inner li.weChat a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/foot_weChat.png") no-repeat center;
+    background: url("http://images.chavesgu.com/foot_weChat.png") no-repeat center;
 }
 .footer .inner li.weChat a:hover{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/weChat_h.png") no-repeat center;
+    background: url("http://images.chavesgu.com/weChat_h.png") no-repeat center;
 }
 .footer .inner li.qq a{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/foot_qq.png") no-repeat center;
+    background: url("http://images.chavesgu.com/foot_qq.png") no-repeat center;
 }
 .footer .inner li.qq a:hover{
-    background: url("http://ooi8uky7u.bkt.clouddn.com/qq_h.png") no-repeat center;
+    background: url("http://images.chavesgu.com/qq_h.png") no-repeat center;
 }
 
 
@@ -428,4 +371,52 @@ header .header_right li.mail{
 }
 .footer .inner li img{
     width: 145px;
+}
+
+.bot{
+    position: absolute;
+    width: 145px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.bot a{
+    display: block;
+    color: #666;
+    text-align: center;
+}
+.gov{
+    height: 20px;
+    width: 230px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.gov a{
+    display: block;
+    color: #666;
+    text-align: center;
+    line-height:20px;
+    height: 20px;
+}
+.gov a img{
+    vertical-align: top;
+    margin-right: 5px;
+}
+.downLoad{
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 10px;
+    top: 30%;
+    text-align: center;
+}
+.downLoad a{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url("http://images.chavesgu.com/word_down.png") no-repeat center;
 }

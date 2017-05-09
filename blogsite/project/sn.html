@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>淞南企业平台数据可视化</title>
-    <link rel="icon" href="http://ooi8uky7u.bkt.clouddn.com/title_icon.ico" type="img/x-ico">
+    <link rel="icon" href="http://images.chavesgu.com/title_icon.ico" type="img/x-ico">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="script.js"></script>
+    <script src="http://images.chavesgu.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 <ul class="sn">
-    <li><img src="http://ooi8uky7u.bkt.clouddn.com/sn_1.jpg" height="1079" width="1903"/></li>
-    <li><img src="http://ooi8uky7u.bkt.clouddn.com/sn_2.jpg" height="1079" width="1903"/></li>
-    <li><img src="http://ooi8uky7u.bkt.clouddn.com/sn_3.jpg" height="1079" width="1903"/></li>
-    <li><img src="http://ooi8uky7u.bkt.clouddn.com/sn_1.jpg" height="1079" width="1903"/></li>
+    <li><img src="http://images.chavesgu.com/sn_1.jpg" height="1079" width="1903"/></li>
+    <li><img src="http://images.chavesgu.com/sn_2.jpg" height="1079" width="1903"/></li>
+    <li><img src="http://images.chavesgu.com/sn_3.jpg" height="1079" width="1903"/></li>
+    <li><img src="http://images.chavesgu.com/sn_1.jpg" height="1079" width="1903"/></li>
     <li class="prev arrow"></li>
     <li class="next arrow"></li>
 </ul>
 </body>
 </html>
+<script>
+    $(function () {
+        //sn
+        let sn_key = 0;
+        let $li  =$('li');
+        let $ul =$li.parent();
+        $('.sn .prev').click(function () {
+            sn_key--;
+            if (sn_key<0){
+                sn_key = 2;
+                $ul.css({'margin-left':'-300%'});
+            }
+            let num = -100*sn_key+'%';
+            $ul.stop(true,true).animate({'margin-left':num});
+        });
+
+        $('.sn .next').click(function () {
+            sn_key++;
+            if (sn_key>3){
+                sn_key = 1;
+                $ul.css({'margin-left':'0'});
+            }
+            let num = -100*sn_key+'%';
+            $ul.stop(true,true).animate({'margin-left':num});
+        })
+    });
+</script>
